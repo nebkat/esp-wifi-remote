@@ -1,3 +1,7 @@
+if (NOT CONFIG_ESP_WIFI_REMOTE_ENABLED)
+    return()
+endif()
+
 if(NOT CONFIG_ESP_WIFI_ENABLED AND NOT CONFIG_ESP_HOST_WIFI_ENABLED)
     set(wifi_remote_sources esp_wifi_remote.c esp_wifi_remote_net.c)
 else()
